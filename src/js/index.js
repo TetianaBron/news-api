@@ -43,8 +43,8 @@ function fetchArticles() {
       }
     })
     .catch(error => {
+      loadMoreBtn.hide();
       alert('Упс, что-то пошло не так и мы не нашли такой статьи!');
-      loadMoreBtn.enable();
     });
 }
 
