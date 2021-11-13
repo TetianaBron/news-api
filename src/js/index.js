@@ -42,7 +42,10 @@ function fetchArticles() {
         loadMoreBtn.enable();
       }
     })
-    .catch(onFetchError);
+    .catch(error => {
+      alert('Упс, что-то пошло не так и мы не нашли такой статьи!');
+      loadMoreBtn.enable();
+    });
 }
 
 function appendArticlesMarkup(articles) {
@@ -54,8 +57,4 @@ function appendArticlesMarkup(articles) {
 
 function clearArticleContainer() {
   refs.articlesСontainer.innerHTML = '';
-}
-
-function onFetchError(error) {
-  alert('Упс, что-то пошло не так и мы не нашли такой статьи!');
 }
