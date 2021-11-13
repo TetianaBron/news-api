@@ -3,22 +3,22 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://tetianabron.github.io/title",
+  "homepage": "https://tetianabron.github.io/news-api",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /title/",
+    "build": "parcel build src/*.html --public-url /news-api/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tetianabron/title.git"
+    "url": "git+https://github.com/tetianabron/news-api.git"
   },
   "keywords": [],
   "author": "Tetiana Bronitska <tetiana.bron@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tetianabron/title/issues"
+    "url": "https://github.com/tetianabron/news-api/issues"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
