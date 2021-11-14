@@ -1,10 +1,4 @@
-const API_KEY = '4330ebfabc654a6992c2aa792f3173a3';
-const BASE_URL = 'https://newsapi.org/v2';
-const options = {
-  headers: {
-    Authorization: API_KEY,
-  },
-};
+const BASE_URL = 'https://news-app-tb.herokuapp.com/api';
 
 export default class NewsApiService {
   constructor() {
@@ -15,9 +9,9 @@ export default class NewsApiService {
   }
 
   fetchArticles() {
-    const url = `${BASE_URL}/everything?q=${this.searchQuery}&language=${this.lang}&pageSize=${this.pageSize}&page=${this.page}`;
+    const url = `${BASE_URL}/${this.searchQuery}&language=${this.lang}&pageSize=${this.pageSize}&page=${this.page}`;
 
-    return fetch(url, options)
+    return fetch(url)
       .then(response => response.json())
       .then(({ articles }) => {
         this.incrementPage();
