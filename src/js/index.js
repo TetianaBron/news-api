@@ -36,7 +36,7 @@ function fetchArticles() {
     .then(articles => {
       if (articles.length === 0) {
         loadMoreBtn.hide();
-        alert('Упс, мы не нашли такой статьи!');
+        alert('There are no such articles!');
       } else {
         appendArticlesMarkup(articles);
         loadMoreBtn.enable();
@@ -44,7 +44,7 @@ function fetchArticles() {
     })
     .catch(error => {
       loadMoreBtn.hide();
-      alert('Упс, что-то пошло не так и мы не нашли такой статьи!');
+      alert('Something went wrong and we did not find such articles!');
     });
 }
 
