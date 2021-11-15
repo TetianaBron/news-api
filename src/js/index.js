@@ -58,3 +58,6 @@ function appendArticlesMarkup(articles) {
 function clearArticleContainer() {
   refs.articlesСontainer.innerHTML = '';
 }
+
+// const publishedData = '2021-11-02T16:30:00Z'.substr(0, 10);
+// console.log(publishedData);

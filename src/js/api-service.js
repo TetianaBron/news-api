@@ -3,7 +3,7 @@ const BASE_URL = 'https://news-app-tb.herokuapp.com/api';
 export default class NewsApiService {
   constructor() {
     this.searchQuery = '';
-    this.lang = 'ru';
+    this.lang = 'en';
     this.pageSize = 5;
     this.page = 1;
   }
@@ -15,6 +15,7 @@ export default class NewsApiService {
       .then(response => response.json())
       .then(({ articles }) => {
         this.incrementPage();
+        console.log(articles);
         return articles;
       });
   }

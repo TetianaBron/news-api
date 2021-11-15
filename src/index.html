@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AJAX</title>
+    <title>News</title>
   </head>
   <body>
+    <h1>Searching news</h1>
     <form class="form-inline search-form js-search-form">
       <div class="form-group mx-sm-3 mb-2">
         <input
@@ -13,13 +14,11 @@
           class="form-control"
           name="query"
           id="searchQuery"
-          placeholder="Что ищем?"
+          placeholder="Enter key word in English"
           autocomplete="off"
         />
       </div>
-      <button type="submit" class="btn btn-primary mb-2 js-search">
-        Искать
-      </button>
+      <button type="submit" class="btn btn-primary mb-2 js-search">Go</button>
     </form>
 
     <ul class="articles js-articles-container"></ul>
@@ -35,7 +34,7 @@
         aria-hidden="true"
       ></span>
 
-      <span class="label">Показать ещё</span>
+      <span class="label">Load more</span>
     </button>
     <script src="./js/index.js"></script>
   </body>
