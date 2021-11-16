@@ -8,16 +8,21 @@ export default class NewsApiService {
     this.page = 1;
   }
 
-  fetchArticles() {
+  async fetchArticles() {
     const url = `${BASE_URL}/${this.searchQuery}&language=${this.lang}&pageSize=${this.pageSize}&page=${this.page}`;
 
-    return fetch(url)
-      .then(response => response.json())
-      .then(({ articles }) => {
-        this.incrementPage();
-        console.log(articles);
-        return articles;
-      });
+    const response = await fetch(url);
+    const { articles } = await response.json();
+    this.incrementPage();
+    return articles;
+
+    //without async/await
+    // return fetch(url)
+    //   .then(response => response.json())
+    //   .then(({ articles }) => {
+    //     this.incrementPage();
+    //     return articles;
+    //   });
   }
 
   incrementPage() {
