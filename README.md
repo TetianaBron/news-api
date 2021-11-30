@@ -1,5 +1,5 @@
 # Finding news
-Responsive Web App, where you can find images by keyword (from open API 'https://newsapi.org/v2')
+Responsive Web App, where you can find news by English keyword (from open API 'https://newsapi.org/v2')
 
 ## Technologies are used: 
 * HTML5; 
